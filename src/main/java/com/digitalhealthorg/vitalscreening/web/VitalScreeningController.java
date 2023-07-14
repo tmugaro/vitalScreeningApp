@@ -48,5 +48,10 @@ public class VitalScreeningController {
         return new ResponseEntity<String>("Patient with '" + id + "' has been updated", HttpStatus.OK);
     }
 
+    @DeleteMapping("deletePatient/{id}")
+    public ResponseEntity<String> deletePatient(@PathVariable("id") Integer id){
+        vitals.deletePatient(id);
+        return new ResponseEntity<String>("Patient vitals with '"+id+"' has been deleted",HttpStatus.OK);
+    }
 
 }
