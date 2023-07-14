@@ -2,6 +2,8 @@ package com.digitalhealthorg.vitalscreening.service;
 
 import com.digitalhealthorg.vitalscreening.entities.Patient;
 
+import java.util.List;
+
 public class VitalSignsService {
 
     private int systolicBloodPressure;
@@ -63,6 +65,10 @@ public class VitalSignsService {
     public Integer savePatient(Patient patient) {
         return 0;
     }
+
+    /*public List<Patient> getAllPatients() {
+       // return 0;
+    }*/
 }
 
 
