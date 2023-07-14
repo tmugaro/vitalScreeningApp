@@ -1,6 +1,7 @@
 package com.digitalhealthorg.vitalscreening.service;
 
 import com.digitalhealthorg.vitalscreening.entities.Patient;
+import com.digitalhealthorg.vitalscreening.repository.VitalScreeningRepository;
 
 import java.util.List;
 
@@ -11,6 +12,14 @@ public class VitalSignsService {
     private double height;
     private double weight;
     private int bloodGlucose;
+
+
+    private VitalScreeningRepository vitalScreeningRepositoryRepository;
+
+    public Patient savePatient(Patient patient) {
+        return vitalScreeningRepositoryRepository.save(patient);
+    }
+
 
     public void setBloodPressure(int systolic, int diastolic) {
         // Validate the input values
@@ -62,13 +71,20 @@ public class VitalSignsService {
         this.bloodGlucose = bloodGlucoseLevel;
     }
 
-    public Integer savePatient(Patient patient) {
-        return 0;
+
+    public List<Patient> getAllPatients() {
     }
 
-    /*public List<Patient> getAllPatients() {
-       // return 0;
-    }*/
+
+    public Patient getPatientById(Integer id) {
+    }
+
+    public void deletePatient(Integer sno) {
+    }
+
+
+
+
 }
 
 
