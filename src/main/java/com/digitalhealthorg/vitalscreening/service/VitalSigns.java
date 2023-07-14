@@ -6,6 +6,7 @@ public class VitalSigns {
     private int diastolicBloodPressure;
     private double height;
     private double weight;
+    private int bloodGlucose;
 
     public void setBloodPressure(int systolic, int diastolic) {
         // Validate the input values
@@ -45,6 +46,16 @@ public class VitalSigns {
 
         // Set the height value
         this.weight = weight;
+    }
+
+    public void setBloodGlucoseLevel(int bloodGlucoseLevel) {
+        // Validate the input value
+        if (bloodGlucoseLevel < 0) {
+            throw new IllegalArgumentException("Blood glucose level cannot be negative");
+        }
+
+        // Set the blood glucose level value
+        this.bloodGlucose = bloodGlucoseLevel;
     }
 }
 
