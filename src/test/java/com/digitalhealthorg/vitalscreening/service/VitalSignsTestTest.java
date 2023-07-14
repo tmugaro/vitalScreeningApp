@@ -33,4 +33,10 @@ class VitalSignsTestTest {
         assertEquals(88, patient.getWeight(), 0.001);
     }
 
+    @Test
+    public void testSetBloodGlucoseLevel() {
+        Patient patient = new Patient();
+        patient.setBloodGlucose(120);
+        assertEquals(120, patient.getBloodGlucose());
+    }
 }
