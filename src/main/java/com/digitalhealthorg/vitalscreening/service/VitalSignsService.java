@@ -42,6 +42,11 @@ public class VitalSignsService {
 
         return vitalScreeningRepositoryRepository.save(vitals);
     }
+
+    public void deletePatient(Long id) {
+        vitalScreeningRepositoryRepository.deleteById(id);
+    }
+
     public Patient getPatientById(Long id) {
         return vitalScreeningRepositoryRepository.findById(id).get();
     }
@@ -95,10 +100,6 @@ public class VitalSignsService {
         // Set the blood glucose level value
         this.bloodGlucose = bloodGlucoseLevel;
     }
-
-
-
-
 
 
     public void deletePatient(Integer sno) {
