@@ -41,4 +41,8 @@ public class Patient {
 
          private int bloodGlucose;
 
+         private int systolicBloodPressure;
+
+         private int diastolicBloodPressure;
+
 }
