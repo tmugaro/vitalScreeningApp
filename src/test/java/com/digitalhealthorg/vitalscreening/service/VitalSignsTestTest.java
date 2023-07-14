@@ -3,15 +3,13 @@ package com.digitalhealthorg.vitalscreening.service;
 import com.digitalhealthorg.vitalscreening.entities.Patient;
 import org.junit.jupiter.api.Test;
 
-import java.time.LocalDate;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class VitalSignsTestTest {
 
     @Test
     public void testBloodPressure() {
-        VitalSigns vitalSigns = new VitalSigns();
+        VitalSignsService vitalSigns = new VitalSignsService();
         vitalSigns.setBloodPressure(120, 80);
         assertEquals(120, vitalSigns.getSystolicBloodPressure());
         assertEquals(80, vitalSigns.getDiastolicBloodPressure());

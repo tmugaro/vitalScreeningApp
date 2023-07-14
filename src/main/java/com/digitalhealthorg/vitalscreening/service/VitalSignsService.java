@@ -1,6 +1,8 @@
 package com.digitalhealthorg.vitalscreening.service;
 
-public class VitalSigns {
+import com.digitalhealthorg.vitalscreening.entities.Patient;
+
+public class VitalSignsService {
 
     private int systolicBloodPressure;
     private int diastolicBloodPressure;
@@ -56,6 +58,10 @@ public class VitalSigns {
 
         // Set the blood glucose level value
         this.bloodGlucose = bloodGlucoseLevel;
+    }
+
+    public Integer savePatient(Patient patient) {
+        return 0;
     }
 }
 
