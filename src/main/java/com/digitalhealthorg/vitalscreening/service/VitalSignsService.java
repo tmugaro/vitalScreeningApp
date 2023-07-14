@@ -21,6 +21,11 @@ public class VitalSignsService {
     }
 
 
+    public List<Patient> getAllPatients() {
+        return (List<Patient>) vitalScreeningRepositoryRepository.findAll();
+    }
+
+
     public void setBloodPressure(int systolic, int diastolic) {
         // Validate the input values
         if (systolic < 0 || diastolic < 0) {
@@ -72,8 +77,6 @@ public class VitalSignsService {
     }
 
 
-    public List<Patient> getAllPatients() {
-    }
 
 
     public Patient getPatientById(Integer id) {
