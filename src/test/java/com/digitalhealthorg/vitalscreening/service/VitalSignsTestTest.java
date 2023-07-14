@@ -25,4 +25,12 @@ class VitalSignsTestTest {
         assertEquals(1.75, patient.getHeight(), 0.001);
     }
 
+    @Test
+    public void testSetWeight() {
+        Patient patient = new Patient();
+        patient.setWeight((int) 88);
+
+        assertEquals(88, patient.getWeight(), 0.001);
+    }
+
 }
