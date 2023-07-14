@@ -26,6 +26,22 @@ public class VitalSignsService {
     }
 
 
+    public Patient updatePatient(Long id, Patient patient) {
+        Patient vitals = vitalScreeningRepositoryRepository.findById(id).get();
+
+        vitals.setEmailAddress(vitals.getEmailAddress());
+        vitals.setSystolicBloodPressure(vitals.getSystolicBloodPressure());
+        vitals.setSystolicBloodPressure(vitals.getSystolicBloodPressure());
+        vitals.setHeight(vitals.getHeight());
+        vitals.setWeight(vitals.getWeight());
+        vitals.setFirstName(vitals.getFirstName());
+        vitals.setLastName(vitals.getLastName());
+        vitals.setDateOfBirth(vitals.getDateOfBirth());
+        vitals.setGender(vitals.getGender());
+        vitals.setPhoneNumber(vitals.getPhoneNumber());
+
+        return vitalScreeningRepositoryRepository.save(vitals);
+    }
     public Patient getPatientById(Long id) {
         return vitalScreeningRepositoryRepository.findById(id).get();
     }
